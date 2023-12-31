@@ -1,0 +1,3 @@
+C:/Users/foote/source/repos/fabEngine/CMakeFiles/ALL_BUILD.dir
+C:/Users/foote/source/repos/fabEngine/CMakeFiles/ZERO_CHECK.dir
+C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeFiles/FabEngine.dir

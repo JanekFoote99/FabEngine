@@ -1,4 +1,4 @@
-#include "../include/ImageLoader.h"
+#include "../inc/ImageLoader.h"
 
 
 unsigned char ImageLoader::m_header[54] = { 0 };

@@ -15,11 +15,11 @@
 
 #include <time.h>
 
-#include "../include/objloader.h"
-#include "../include/ShaderLoader.h"
-#include "../include/ImageLoader.h"
-#include "../include/controls.h"
-#include "../include/MeshViewer.h"
+#include "../inc/objloader.h"
+#include "../inc/ShaderLoader.h"
+#include "../inc/ImageLoader.h"
+#include "../inc/controls.h"
+#include "../inc/MeshViewer.h"
 
 glm::mat4 MVPMatrix;
 glm::mat4 MVInvTrans;

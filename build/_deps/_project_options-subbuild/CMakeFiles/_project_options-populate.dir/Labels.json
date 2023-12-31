@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/_project_options-populate"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/42a7894f46991a5c488b1a784e7cd983/_project_options-populate.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/6a70e15de4c0ceb19b150e74193de241/_project_options-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/foote/source/repos/fabEngine/build/_deps/_project_options-subbuild/CMakeFiles/53f59613d710a605cf26016d8ba355a5/_project_options-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"_project_options-populate"
+		],
+		"name" : "_project_options-populate"
+	}
+}

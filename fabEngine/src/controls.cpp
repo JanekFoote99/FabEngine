@@ -1,4 +1,4 @@
-#include "../include/controls.h"
+#include "../inc/controls.h"
 
 // Initial position : on +Z
 glm::vec3 position = glm::vec3(2.0f, 2.0f, 7.0f);

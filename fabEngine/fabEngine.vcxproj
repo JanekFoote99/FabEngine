@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
@@ -17,149 +12,383 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{4C893DAF-52D5-305D-8F37-C1DDE8602FFC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e01ac018-844d-4923-93e2-bce63dbec804}</ProjectGuid>
-    <RootNamespace>fabEngine</RootNamespace>
+    <VcpkgEnabled>false</VcpkgEnabled>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>FabEngine</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FabEngine.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FabEngine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FabEngine.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FabEngine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FabEngine.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FabEngine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FabEngine.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FabEngine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp14</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLFW_DLL;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLFW_DLL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/foote/source/repos/fabEngine/fabEngine/Debug/FabEngine.exe -installedDir C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>vcpkg\installed\x64-windows\debug\lib\glew32d.lib;vcpkg\installed\x64-windows\debug\lib\imguid.lib;opengl32.lib;opengl32.lib;glu32.lib;vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/foote/source/repos/fabEngine/fabEngine/Debug/FabEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/foote/source/repos/fabEngine/fabEngine/Debug/FabEngine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/foote/source/repos/fabEngine/fabEngine/Release/FabEngine.exe -installedDir C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
+      <AdditionalDependencies>vcpkg\installed\x64-windows\lib\glew32.lib;vcpkg\installed\x64-windows\lib\imgui.lib;opengl32.lib;opengl32.lib;glu32.lib;vcpkg\installed\x64-windows\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/foote/source/repos/fabEngine/fabEngine/Release/FabEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/foote/source/repos/fabEngine/fabEngine/Release/FabEngine.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/foote/source/repos/fabEngine/fabEngine/MinSizeRel/FabEngine.exe -installedDir C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg\installed\x64-windows\lib\glew32.lib;vcpkg\installed\x64-windows\lib\imgui.lib;opengl32.lib;opengl32.lib;glu32.lib;vcpkg\installed\x64-windows\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/foote/source/repos/fabEngine/fabEngine/MinSizeRel/FabEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/foote/source/repos/fabEngine/fabEngine/MinSizeRel/FabEngine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\foote\source\repos\fabEngine\fabEngine\FabEngine_INCLUDE_DIR;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/foote/source/repos/fabEngine/fabEngine/RelWithDebInfo/FabEngine.exe -installedDir C:/Users/foote/source/repos/fabEngine/fabEngine/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg\installed\x64-windows\lib\glew32.lib;vcpkg\installed\x64-windows\lib\imgui.lib;opengl32.lib;opengl32.lib;glu32.lib;vcpkg\installed\x64-windows\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/foote/source/repos/fabEngine/fabEngine/RelWithDebInfo/FabEngine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/foote/source/repos/fabEngine/fabEngine/RelWithDebInfo/FabEngine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\MeshViewer.cpp" />
-    <ClCompile Include="src\OBJLoader.cpp" />
-    <ClCompile Include="src\controls.cpp" />
-    <ClCompile Include="src\ImageLoader.cpp" />
-    <ClCompile Include="src\ShaderLoader.cpp" />
-    <ClCompile Include="src\Main.cpp" />
+    <CustomBuild Include="C:\Users\foote\source\repos\fabEngine\fabEngine\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/foote/source/repos/fabEngine -BC:/Users/foote/source/repos/fabEngine --check-stamp-file C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\vcpkg-cmake-wrapper.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/foote/source/repos/fabEngine -BC:/Users/foote/source/repos/fabEngine --check-stamp-file C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\vcpkg-cmake-wrapper.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/foote/source/repos/fabEngine -BC:/Users/foote/source/repos/fabEngine --check-stamp-file C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\vcpkg-cmake-wrapper.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/foote/source/repos/fabEngine -BC:/Users/foote/source/repos/fabEngine --check-stamp-file C:/Users/foote/source/repos/fabEngine/fabEngine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glew\vcpkg-cmake-wrapper.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\Users\foote\source\repos\fabEngine\fabEngine\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\foote\source\repos\fabEngine\fabEngine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\controls.h" />
-    <ClInclude Include="include\ImageLoader.h" />
-    <ClInclude Include="include\ShaderLoader.h" />
-    <ClInclude Include="include\OBJLoader.h" />
-    <ClInclude Include="include\MeshViewer.h" />
+    <ClCompile Include="C:\Users\foote\source\repos\fabEngine\fabEngine\src\ImageLoader.cpp" />
+    <ClCompile Include="C:\Users\foote\source\repos\fabEngine\fabEngine\src\Main.cpp" />
+    <ClCompile Include="C:\Users\foote\source\repos\fabEngine\fabEngine\src\MeshViewer.cpp" />
+    <ClCompile Include="C:\Users\foote\source\repos\fabEngine\fabEngine\src\OBJLoader.cpp" />
+    <ClCompile Include="C:\Users\foote\source\repos\fabEngine\fabEngine\src\ShaderLoader.cpp" />
+    <ClCompile Include="C:\Users\foote\source\repos\fabEngine\fabEngine\src\controls.cpp" />
+    <ClInclude Include="C:\Users\foote\source\repos\fabEngine\fabEngine\inc\ImageLoader.h" />
+    <ClInclude Include="C:\Users\foote\source\repos\fabEngine\fabEngine\inc\MeshViewer.h" />
+    <ClInclude Include="C:\Users\foote\source\repos\fabEngine\fabEngine\inc\OBJLoader.h" />
+    <ClInclude Include="C:\Users\foote\source\repos\fabEngine\fabEngine\inc\ShaderLoader.h" />
+    <ClInclude Include="C:\Users\foote\source\repos\fabEngine\fabEngine\inc\controls.h" />
+    <None Include="C:\Users\foote\source\repos\fabEngine\fabEngine\shader\fragShader.glsl">
+    </None>
+    <None Include="C:\Users\foote\source\repos\fabEngine\fabEngine\shader\vertShader.glsl">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\foote\source\repos\fabEngine\ZERO_CHECK.vcxproj">
+      <Project>{37D01C0A-EE7E-395C-8947-6520B6CAA3F4}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

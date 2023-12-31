@@ -1,4 +1,4 @@
-#include "../include/MeshViewer.h"
+#include "../inc/MeshViewer.h"
 
 //TODO: Setup default constructor and destructor
 MeshViewer::MeshViewer()

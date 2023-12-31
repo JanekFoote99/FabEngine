@@ -1,4 +1,4 @@
-#include "../include/OBJLoader.h"
+#include "../inc/OBJLoader.h"
 
 bool loadOBJ(
 	const char* filepath,

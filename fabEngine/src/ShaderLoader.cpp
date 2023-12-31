@@ -1,4 +1,4 @@
-#include "../include/ShaderLoader.h"
+#include "../inc/ShaderLoader.h"
 
 GLuint ShaderLoader::LoadShader(const char* vertexPath, const char* fragPath)
 {
