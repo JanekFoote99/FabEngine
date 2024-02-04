@@ -59,7 +59,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLCORE_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;GLCORE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..;..\examples;src;external\glfw\include;external\gl3w\include;external\Glad\include;external\imgui;external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc;inc\Core;external\glfw\include;external\gl3w\include;external\Glad\include;external\imgui;external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -80,7 +80,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLCORE_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;GLCORE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..;..\examples;src;external\glfw\include;external\gl3w\include;external\Glad\include;external\imgui;external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc;inc\Core;external\glfw\include;external\gl3w\include;external\Glad\include;external\imgui;external\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -525,15 +525,20 @@
     <ClInclude Include="external\glm\glm\vec3.hpp" />
     <ClInclude Include="external\glm\glm\vec4.hpp" />
     <ClInclude Include="external\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="inc\Core\Application.h" />
+    <ClInclude Include="inc\Core\Window.h" />
     <ClInclude Include="inc\ImageLoader.h" />
     <ClInclude Include="inc\MeshViewer.h" />
     <ClInclude Include="inc\OBJLoader.h" />
     <ClInclude Include="inc\ShaderLoader.h" />
     <ClInclude Include="inc\controls.h" />
+    <ClInclude Include="types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="external\imgui\examples\imgui_impl_glfw.cpp" />
     <ClCompile Include="external\imgui\examples\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Core\Application.cpp" />
+    <ClCompile Include="src\Core\Window.cpp" />
     <ClCompile Include="src\ImageLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\MeshViewer.cpp" />

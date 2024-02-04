@@ -92,7 +92,7 @@ int main()
 	monitor = glfwGetPrimaryMonitor();
 
 	GLFWwindow* window;
-	window = glfwCreateWindow(1920, 1080, "Main Window", nullptr, nullptr);
+	window = glfwCreateWindow(1920, 1080, "Main Window", monitor, nullptr);
 	glfwMakeContextCurrent(window);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))

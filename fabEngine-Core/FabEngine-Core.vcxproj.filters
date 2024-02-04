@@ -31,11 +31,17 @@
     <Filter Include="inc">
       <UniqueIdentifier>{1F80880B-8B89-887C-1405-9F7C800D947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="inc\Core">
+      <UniqueIdentifier>{D78FA160-C35C-FC6B-EC75-EA13D8A131FA}</UniqueIdentifier>
+    </Filter>
     <Filter Include="shader">
       <UniqueIdentifier>{1C21B11B-08C3-DBF1-F17D-EF45DDBE6242}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core">
+      <UniqueIdentifier>{A5D31CCF-91A0-77DA-BAB9-6582A6E5AC68}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1314,6 +1320,12 @@
     <ClInclude Include="external\glm\glm\vector_relational.hpp">
       <Filter>external\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Core\Application.h">
+      <Filter>inc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Core\Window.h">
+      <Filter>inc\Core</Filter>
+    </ClInclude>
     <ClInclude Include="inc\ImageLoader.h">
       <Filter>inc</Filter>
     </ClInclude>
@@ -1329,6 +1341,9 @@
     <ClInclude Include="inc\controls.h">
       <Filter>inc</Filter>
     </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>inc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="external\imgui\examples\imgui_impl_glfw.cpp">
@@ -1336,6 +1351,9 @@
     </ClCompile>
     <ClCompile Include="external\imgui\examples\imgui_impl_opengl3.cpp">
       <Filter>external\imgui\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Application.cpp">
+      <Filter>src\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\ImageLoader.cpp">
       <Filter>src</Filter>
@@ -1355,6 +1373,7 @@
     <ClCompile Include="src\controls.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Core\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\fragShader.glsl">

@@ -10,23 +10,12 @@ project "FabEngine-Core"
     -- pchheader "glpch.h"
     -- pchsource "src/glpch.cpp"
 
-    -- Helper function: add dear imgui source files into project
-    function imgui_as_src(fs_path, project_path)
-        if (project_path == nil) then project_path = fs_path; end;	        -- default to same virtual folder as the file system folder (in this project it would be ".." !)
-        files { fs_path .. "/*.cpp", fs_path .. "/*.h" }
-        includedirs { fs_path, fs_path .. "/examples" }
-        vpaths { [project_path] = { fs_path .. "/*.*", fs_path .. "/misc/natvis/*.natvis" } }  -- add in a specific folder of the Visual Studio project
-        filter { "toolset:msc*" }
-            files { fs_path .. "/misc/natvis/*.natvis" }
-        filter {}
-    end
-
-    imgui_as_src ("..", "imgui")
-
     files
     {
-        "inc/**.h",
         "src/**.cpp",
+        "inc/**.h",
+        "src/Core/**.cpp",
+        "inc/Core/**.h",
         "shader/**.glsl",
         "external/glm/glm/**.hpp",
         "external/glm/glm/**.inl",
@@ -41,7 +30,8 @@ project "FabEngine-Core"
 
     includedirs
 	{
-		"src",
+		"inc",
+        "inc/Core",
 		"%{includeDir.GLFW}",
         "%{includeDir.gl3w}",
 		"%{includeDir.Glad}",
