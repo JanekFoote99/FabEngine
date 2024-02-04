@@ -1344,6 +1344,8 @@
     <ClInclude Include="types.h">
       <Filter>inc</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Core\Camera.h" />
+    <ClInclude Include="inc\Core\ImGuiLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="external\imgui\examples\imgui_impl_glfw.cpp">
@@ -1374,6 +1376,8 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Window.cpp" />
+    <ClCompile Include="src\Core\Camera.cpp" />
+    <ClCompile Include="src\Core\ImGuiLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\fragShader.glsl">
