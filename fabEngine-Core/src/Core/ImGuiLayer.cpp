@@ -1,4 +1,7 @@
 #include <ImGuiLayer.h>
+#include <Application.h>
+#include <glad/glad.h>
+
 
 namespace fabCoreGL
 {
@@ -17,7 +20,12 @@ namespace fabCoreGL
     GLFWwindow* window = app.GetWindow().GetWindow();
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 460");
+
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+      std::cout << "Failed to initialize OpenGL context" << std::endl;
+    }
+    ImGui_ImplOpenGL3_Init("version 460");
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
   }

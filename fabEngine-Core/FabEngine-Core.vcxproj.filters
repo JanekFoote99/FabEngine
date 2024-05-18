@@ -1323,6 +1323,12 @@
     <ClInclude Include="inc\Core\Application.h">
       <Filter>inc\Core</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Core\Camera.h">
+      <Filter>inc\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Core\ImGuiLayer.h">
+      <Filter>inc\Core</Filter>
+    </ClInclude>
     <ClInclude Include="inc\Core\Window.h">
       <Filter>inc\Core</Filter>
     </ClInclude>
@@ -1341,11 +1347,9 @@
     <ClInclude Include="inc\controls.h">
       <Filter>inc</Filter>
     </ClInclude>
-    <ClInclude Include="types.h">
+    <ClInclude Include="inc\types.h">
       <Filter>inc</Filter>
     </ClInclude>
-    <ClInclude Include="inc\Core\Camera.h" />
-    <ClInclude Include="inc\Core\ImGuiLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="external\imgui\examples\imgui_impl_glfw.cpp">
@@ -1355,6 +1359,15 @@
       <Filter>external\imgui\examples</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Application.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Camera.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\ImGuiLayer.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Window.cpp">
       <Filter>src\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\ImageLoader.cpp">
@@ -1375,9 +1388,6 @@
     <ClCompile Include="src\controls.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Window.cpp" />
-    <ClCompile Include="src\Core\Camera.cpp" />
-    <ClCompile Include="src\Core\ImGuiLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\fragShader.glsl">

@@ -9,28 +9,24 @@ namespace fabCoreGL
     Init(data);
   }
 
-  Window::~Window()
-  {
-    delete m_window;
-    delete m_monitor;
-    glfwTerminate();
-  }
-
-  void Window::SetHeight(ui8 height)
+  void Window::SetHeight(ui16 height)
   {
     if (height > 1440)
     {
       std::cout << "Couldn't set Window height. Values must range between 0 => 1440" << std::endl;
+      m_windowData.m_height = 1440;
       return;
     }
     m_windowData.m_height = height;
   }
 
-  void Window::SetWidth(ui8 width)
+  void Window::SetWidth(ui16 width)
   {
     if (width > 2560)
     {
       std::cout << "Couldn't set Window width. Values must range between 0 => 2560" << std::endl;
+      m_windowData.m_width = 2560;
+      return;
     }
     m_windowData.m_width = width;
   }
@@ -44,7 +40,13 @@ namespace fabCoreGL
     }
 
     m_monitor = glfwGetPrimaryMonitor();
-    m_window = glfwCreateWindow(data.m_width, data.m_height, data.title.c_str(), m_monitor, NULL);
+    m_window = glfwCreateWindow(data.m_width, data.m_height, data.title.c_str(), NULL, NULL);
+
+    // enable VSYNC
+    //glfwSwapInterval(1);
+
+    glfwSetInputMode(m_window, GLFW_STICKY_KEYS, true);
+    glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwMakeContextCurrent(m_window);
   }

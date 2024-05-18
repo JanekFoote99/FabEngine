@@ -1,20 +1,22 @@
 #include <iostream>
 #include <iomanip>
 
-
 #include "glm/glm.hpp"
 #include "glm/gtx/string_cast.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 
-#define IMGUI_IMPL_OPENGL_LOADER_GLAD
-#include "imgui.h"
-#include "examples/imgui_impl_glfw.h"
-#include "examples/imgui_impl_opengl3.h"
+//#define IMGUI_IMPL_OPENGL_LOADER_GLAD
+//#include "imgui.h"
+//#include "examples/imgui_impl_glfw.h"
+//#include "examples/imgui_impl_opengl3.h"
 
 #include "GLFW/glfw3.h"
 
 #include <time.h>
+
+#include <ImGuiLayer.h>
+#include <Application.h>
 
 #include "../inc/objloader.h"
 #include "../inc/ShaderLoader.h"
@@ -25,6 +27,8 @@
 glm::mat4 MVPMatrix;
 glm::mat4 MVInvTrans;
 glm::vec3 LightPosition;
+
+using namespace fabCoreGL;
 
 // make a struct of a light source containing vertex buffer, index buffer, position, and color
 struct Light
@@ -49,19 +53,6 @@ struct ImGuiAttributes
 	bool rotateObjectEnabled = false;
 	bool displayBoundingBox = false;
 };
-
-void ImGuiInit(GLFWwindow* window)
-{
-	// Setup Dear ImGui context
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& io = ImGui::GetIO();
-	// Setup Platform/Renderer bindings
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
-	ImGui_ImplOpenGL3_Init("#version 460");
-	// Setup Dear ImGui style
-	ImGui::StyleColorsDark();
-}
 
 std::string Mat4ToString(glm::mat4 MVP)
 {
@@ -88,31 +79,13 @@ int main()
 		std::cerr << "glfw Initialization failed" << std::endl;
 	}
 
-	GLFWmonitor* monitor;
-	monitor = glfwGetPrimaryMonitor();
+	ImGuiLayer* layer;
 
-	GLFWwindow* window;
-	window = glfwCreateWindow(1920, 1080, "Main Window", monitor, nullptr);
-	glfwMakeContextCurrent(window);
-
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	{
-		std::cout << "Failed to initialize OpenGL context" << std::endl;
-		return -1;
-	}
+	fabCoreGL::Application app("fabCore", 1920, 1080);
 
 	ImGuiAttributes imGuiAttributes;
 
-	// enable VSYNC
-	//glfwSwapInterval(1);
-
-	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
 	glClearColor(0.3f, 0.3f, 0.3f, 0.0f);
-
-	ImGuiInit(window);
-
 
 	//Setup Vertax Array Object
 	GLuint VertexArrayID;
@@ -184,6 +157,8 @@ int main()
 
 	float framerate = 0.0f;
 	std::string MVPString = glm::to_string(glm::mat4(1.0f));
+
+	GLFWwindow* window = app.GetWindow().GetWindow();
 
 	generateMatricesFromInputs(window, viewMatrix, projectionMatrix, imGuiAttributes.nearPlane, imGuiAttributes.farPlane, true);
 

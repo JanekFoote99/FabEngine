@@ -534,7 +534,7 @@
     <ClInclude Include="inc\OBJLoader.h" />
     <ClInclude Include="inc\ShaderLoader.h" />
     <ClInclude Include="inc\controls.h" />
-    <ClInclude Include="types.h" />
+    <ClInclude Include="inc\types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="external\imgui\examples\imgui_impl_glfw.cpp" />

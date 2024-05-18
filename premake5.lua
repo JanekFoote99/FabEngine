@@ -1,6 +1,6 @@
 workspace "fabEngine-Core"
     architecture "x64"
-	startproject "fabEngine-Core"
+    startproject "FabEngine-Core"
 
     configurations
     {
