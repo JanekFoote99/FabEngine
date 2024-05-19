@@ -11,22 +11,22 @@ namespace fabCoreGL
 
   void ImGuiLayer::Init()
   {
-    // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
-    // Setup Platform/Renderer bindings
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    
     Application& app = Application::GetInstance();
     GLFWwindow* window = app.GetWindow().GetWindow();
-
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
       std::cout << "Failed to initialize OpenGL context" << std::endl;
     }
-    ImGui_ImplOpenGL3_Init("version 460");
-    // Setup Dear ImGui style
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 460");
+    
     ImGui::StyleColorsDark();
   }
 

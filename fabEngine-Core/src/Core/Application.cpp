@@ -17,8 +17,18 @@ namespace fabCoreGL
 
   void Application::OnDraw()
   {
-    m_imGuiLayer->Start();
+    while (m_Running)
+    {
+      float time = glfwGetTime();
+      float delta = time - m_lastFrameTime;
+      m_lastFrameTime = time;
 
-    m_imGuiLayer->End();
+      m_imGuiLayer->Start();
+      for (Layer* layer : m_layerStack)
+      {
+        layer->OnUpdate(delta);
+      }
+      m_imGuiLayer->End();
+    }
   }
 }

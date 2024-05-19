@@ -3,6 +3,7 @@
 #include "Window.h"
 
 #include "ImGuiLayer.h"
+#include <LayerStack.h>
 
 namespace fabCoreGL
 {
@@ -22,5 +23,8 @@ namespace fabCoreGL
 
     ImGuiLayer* m_imGuiLayer;
     bool m_Running = true;
+    float m_lastFrameTime = 0.0f;
+  private:
+    LayerStack m_layerStack;
   };
 }

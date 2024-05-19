@@ -14,9 +14,9 @@ namespace fabCoreGL
 
     void Init();
     void Destroy();
+
     void Start();
     void End();
-
   private:
 
   };

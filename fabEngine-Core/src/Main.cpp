@@ -73,14 +73,6 @@ std::string Mat4ToString(glm::mat4 MVP)
 
 int main()
 {
-	// Get main monitor
-	if (!glfwInit())
-	{
-		std::cerr << "glfw Initialization failed" << std::endl;
-	}
-
-	ImGuiLayer* layer;
-
 	fabCoreGL::Application app("fabCore", 1920, 1080);
 
 	ImGuiAttributes imGuiAttributes;
@@ -145,7 +137,6 @@ int main()
 
 	// Setup Meshviewer
 	MeshViewer mesh(filepath, texturePath);
-
 
 	// Initializing transformation Matrices
 	glm::mat4 viewMatrix = glm::mat4(1.0f);
@@ -292,7 +283,7 @@ int main()
 		bool value = true;
 		bool* open_ptr = &value;
 
-		// Display Framerate
+		/// Display Framerate
 		ImGui::Begin("Display Framerate", open_ptr, transparentTextFlags);
 		ImGui::PushStyleColor(ImGuiCol_Text, IM_COL32(0, 0, 0, 255));
 		ImGui::Text("%.0f", framerate);
