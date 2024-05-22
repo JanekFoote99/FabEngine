@@ -64,8 +64,6 @@ GLuint ImageLoader::loadBMP(const char* filepath)
 
 	glGenerateMipmap(GL_TEXTURE_2D);
 
-	std::cout << "Texture successfully initialized\n";
-
 	return textureID;
 }
 
@@ -91,7 +89,6 @@ GLuint ImageLoader::loadDDS(const char* filepath)
 	/* verify the type of file */
 	char filecode[4];
 	fread(filecode, 1, 4, fp);
-	
 
 	if (strncmp(filecode, "DDS ", 4) != 0)
 	{

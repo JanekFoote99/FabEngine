@@ -33,11 +33,21 @@ using namespace fabCoreGL;
 // make a struct of a light source containing vertex buffer, index buffer, position, and color
 struct Light
 {
-	std::vector<glm::vec3> vertexBuffer;
-	std::vector<glm::vec3> indexBuffer;
-	std::vector<glm::vec3> colorBuffer;
-	glm::vec3 position = glm::vec3(5.0f, 4.0f, 4.0f);
-	glm::vec3 color = glm::vec3(0.0f, 0.0f, 0.0f);
+	std::vector<f32v3> vertexBuffer;
+	std::vector<f32v3> indexBuffer;
+	std::vector<f32v3> colorBuffer;
+	f32v3 position = f32v3(5.0f, 4.0f, 4.0f);
+	f32v3 color = f32v3(0.0f, 0.0f, 0.0f);
+};
+
+// make a struct of a light source containing vertex buffer, index buffer, position, and color
+struct Light
+{
+	std::vector<f32v3> vertexBuffer;
+	std::vector<f32v3> indexBuffer;
+	std::vector<f32v3> colorBuffer;
+	f32v3 position = f32v3(5.0f, 4.0f, 4.0f);
+	f32v3 color = f32v3(0.0f, 0.0f, 0.0f);
 };
 
 struct ImGuiAttributes
@@ -45,9 +55,9 @@ struct ImGuiAttributes
 	glm::f32 nearPlane = 0.1f;
 	glm::f32 farPlane = 100.0f;
 
-	glm::vec3 ambientColor = glm::vec3(0.0f, 0.0f, 0.0f);
-	glm::vec3 diffuseColor = glm::vec3(1.0f, 1.0f, 1.0f);
-	glm::vec3 specularColor = glm::vec3(1.0f, 1.0f, 1.0f);
+	f32v3 ambientColor = f32v3(0.0f, 0.0f, 0.0f);
+	f32v3 diffuseColor = f32v3(1.0f, 1.0f, 1.0f);
+	f32v3 specularColor = f32v3(1.0f, 1.0f, 1.0f);
 	float specularExponent = 64.0f;
 
 	bool rotateObjectEnabled = false;

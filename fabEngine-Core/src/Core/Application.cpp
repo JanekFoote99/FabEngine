@@ -9,7 +9,7 @@ namespace fabCoreGL
   {
     s_instance = this;
 
-    m_window = std::make_unique<Window>(Window(WindowData(name, width, height)));
+    m_window = std::make_unique<Window>(WindowData(name, width, height));
 
     m_imGuiLayer = new ImGuiLayer();
     m_imGuiLayer->Init();
@@ -22,11 +22,15 @@ namespace fabCoreGL
       float time = glfwGetTime();
       float delta = time - m_lastFrameTime;
       m_lastFrameTime = time;
+      for (Layer* layer : m_layerStack)
+      {
+        layer->OnUpdate(delta);
+      }
 
       m_imGuiLayer->Start();
       for (Layer* layer : m_layerStack)
       {
-        layer->OnUpdate(delta);
+        layer->OnImGuiRender();
       }
       m_imGuiLayer->End();
     }
