@@ -528,8 +528,11 @@
     <ClInclude Include="inc\Core\Application.h" />
     <ClInclude Include="inc\Core\Camera.h" />
     <ClInclude Include="inc\Core\ImGuiLayer.h" />
+    <ClInclude Include="inc\Core\Layer.h" />
+    <ClInclude Include="inc\Core\LayerStack.h" />
     <ClInclude Include="inc\Core\Window.h" />
     <ClInclude Include="inc\ImageLoader.h" />
+    <ClInclude Include="inc\MainLayer.h" />
     <ClInclude Include="inc\MeshViewer.h" />
     <ClInclude Include="inc\OBJLoader.h" />
     <ClInclude Include="inc\ShaderLoader.h" />
@@ -542,15 +545,19 @@
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Camera.cpp" />
     <ClCompile Include="src\Core\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Core\Layer.cpp" />
+    <ClCompile Include="src\Core\LayerStack.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
     <ClCompile Include="src\ImageLoader.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\MainLayer.cpp" />
     <ClCompile Include="src\MeshViewer.cpp" />
     <ClCompile Include="src\OBJLoader.cpp" />
     <ClCompile Include="src\ShaderLoader.cpp" />
     <ClCompile Include="src\controls.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="inc\GLCore.h" />
     <None Include="shader\fragShader.glsl" />
     <None Include="shader\vertShader.glsl" />
   </ItemGroup>

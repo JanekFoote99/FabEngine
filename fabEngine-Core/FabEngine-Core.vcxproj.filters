@@ -1350,6 +1350,9 @@
     <ClInclude Include="inc\types.h">
       <Filter>inc</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Core\Layer.h" />
+    <ClInclude Include="inc\Core\LayerStack.h" />
+    <ClInclude Include="inc\MainLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="external\imgui\examples\imgui_impl_glfw.cpp">
@@ -1388,6 +1391,9 @@
     <ClCompile Include="src\controls.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Core\Layer.cpp" />
+    <ClCompile Include="src\Core\LayerStack.cpp" />
+    <ClCompile Include="src\MainLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\fragShader.glsl">
@@ -1395,6 +1401,9 @@
     </None>
     <None Include="shader\vertShader.glsl">
       <Filter>shader</Filter>
+    </None>
+    <None Include="inc\GLCore.h">
+      <Filter>inc</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -18,12 +18,11 @@ namespace fabCoreGL
     Window& GetWindow() { return *m_window; }
   private:
     std::unique_ptr<Window> m_window;
-    f32 m_lastFrameTime = 0.0f;
     static Application* s_instance;
 
     ImGuiLayer* m_imGuiLayer;
     bool m_Running = true;
-    float m_lastFrameTime = 0.0f;
+    f32 m_lastFrameTime = 0.0f;
   private:
     LayerStack m_layerStack;
   };
