@@ -14,10 +14,10 @@ namespace fabCoreGL
     if (height > 1440)
     {
       std::cout << "Couldn't set Window height. Values must range between 0 => 1440" << std::endl;
-      m_windowData.m_height = 1440;
+      m_windowData.height = 1440;
       return;
     }
-    m_windowData.m_height = height;
+    m_windowData.height = height;
   }
 
   void Window::SetWidth(ui16 width)
@@ -25,10 +25,20 @@ namespace fabCoreGL
     if (width > 2560)
     {
       std::cout << "Couldn't set Window width. Values must range between 0 => 2560" << std::endl;
-      m_windowData.m_width = 2560;
+      m_windowData.width = 2560;
       return;
     }
-    m_windowData.m_width = width;
+    m_windowData.width = width;
+  }
+
+  ui16 Window::GetMouseOffsetX()
+  {
+
+  }
+
+  ui16 Window::GetMouseOffsetY()
+  {
+    
   }
 
   int Window::Init(const WindowData& data)
@@ -40,7 +50,7 @@ namespace fabCoreGL
     }
 
     m_monitor = glfwGetPrimaryMonitor();
-    m_window = glfwCreateWindow(data.m_width, data.m_height, data.title.c_str(), NULL, NULL);
+    m_window = glfwCreateWindow(data.width, data.height, data.title.c_str(), NULL, NULL);
 
     // enable VSYNC
     //glfwSwapInterval(1);

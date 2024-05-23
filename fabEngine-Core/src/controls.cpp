@@ -150,7 +150,6 @@ void generateMatricesFromInputs(GLFWwindow* window, glm::mat4& ViewMatrix, glm::
 
 			FOV = std::clamp(FOV, 30, 150);
 
-			// Projection matrix : 45&deg; Field of View, 4:3 ratio, display range: nearPlane 0.1 unit <-> farPlane 100 units
 			ProjectionMatrix = glm::perspective(glm::radians(static_cast<float>(FOV)), 4.0f / 3.0f, nearPlane, farPlane);
 			// Camera matrix
 			ViewMatrix = glm::lookAt(

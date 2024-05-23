@@ -14,7 +14,7 @@ namespace ImageLoader
 
 	extern unsigned char m_header[54];
 	extern unsigned int m_dataPos;
-	extern unsigned int m_width, m_height;
+	extern unsigned int width, height;
 	extern unsigned int m_imageSize;
 	//RGB data
 	extern unsigned char* m_data;

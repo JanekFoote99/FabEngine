@@ -13,8 +13,17 @@ namespace fabCoreGL
   struct WindowData
   {
     std::string title;
-    ui16 m_width;
-    ui16 m_height;
+
+    ui16 width;
+    ui16 height;
+
+    WindowData(std::string title, ui16 width, ui16 height) :
+      title(title),
+      width(width),
+      height(height)
+    {
+
+    }
   };
 
   class Window
@@ -22,11 +31,14 @@ namespace fabCoreGL
   public:
     Window(const WindowData& windowData);
 
-    ui16 GetWidth() { return m_windowData.m_width; }
-    ui16 GetHeight() { return m_windowData.m_height; }
+    ui16 GetWidth() { return m_windowData.width; }
+    ui16 GetHeight() { return m_windowData.height; }
 
     void SetWidth(ui16 width);
     void SetHeight(ui16 height);
+    
+    ui16 GetMouseOffsetX();
+    ui16 GetMouseOffsetY();
 
     GLFWwindow* GetWindow() { return m_window; }
 

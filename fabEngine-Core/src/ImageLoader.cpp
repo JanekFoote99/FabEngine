@@ -3,8 +3,8 @@
 
 unsigned char ImageLoader::m_header[54] = { 0 };
 unsigned int ImageLoader::m_dataPos = 0;
-unsigned int ImageLoader::m_width = 0;
-unsigned int ImageLoader::m_height = 0;
+unsigned int ImageLoader::width = 0;
+unsigned int ImageLoader::height = 0;
 unsigned int ImageLoader::m_imageSize = 0;
 unsigned char* ImageLoader::m_data = nullptr;
 
@@ -28,11 +28,11 @@ GLuint ImageLoader::loadBMP(const char* filepath)
 
 		m_dataPos = *(int*)&(m_header[0x0A]);
 		m_imageSize = *(int*)&(m_header[0x22]);
-		m_width = *(int*)&(m_header[0x12]);
-		m_height = *(int*)&(m_header[0x16]);
+		width = *(int*)&(m_header[0x12]);
+		height = *(int*)&(m_header[0x16]);
 
 		// Some BMP files are misformatted, guess missing information
-		if (m_imageSize == 0) m_imageSize = m_width * m_height * 3; // 3 for RGB
+		if (m_imageSize == 0) m_imageSize = width * height * 3; // 3 for RGB
 		if (m_dataPos == 0) m_dataPos = 54;
 
 		m_data = new unsigned char[m_imageSize];
@@ -54,7 +54,7 @@ GLuint ImageLoader::loadBMP(const char* filepath)
 	glBindTexture(GL_TEXTURE_2D, textureID);
 
 	// Give the Image to OpenGL
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_width, m_height, 0, GL_BGR, GL_UNSIGNED_BYTE, m_data);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, m_data);
 
 	// Trilinear Filtering
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);

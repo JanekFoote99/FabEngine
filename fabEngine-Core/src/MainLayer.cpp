@@ -4,6 +4,8 @@
 #include "MeshViewer.h"
 #include <glm/gtx/string_cast.hpp>
 
+#include "controls.h"
+
 MainLayer::MainLayer()
 {
 
@@ -52,7 +54,8 @@ void MainLayer::OnAttach()
 								 glm::vec3(0.5f, -0.5f, -0.5f),
 								 glm::vec3(0.5f, 0.5f, -0.5f),
 								 glm::vec3(-0.5f, 0.5f, -0.5f) };
-	// Create the index buffer for the cube
+
+	// Create the index buffer for the light cube
 	light.indexBuffer = { glm::vec3(0, 1, 2),
 								 glm::vec3(0, 2, 3),
 								 glm::vec3(1, 5, 6),
@@ -65,6 +68,8 @@ void MainLayer::OnAttach()
 								 glm::vec3(4, 1, 0),
 								 glm::vec3(3, 2, 6),
 								 glm::vec3(3, 6, 7) };
+
+
 
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);

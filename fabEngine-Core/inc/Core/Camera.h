@@ -9,13 +9,18 @@ namespace fabCoreGL
   class Camera
   {
   public:
-    Camera();
-  private:
-    void computeMatrices();
-    f32v3 m_position;
+    Camera(f32 near, f32 far, f32 aspectRatio, ui32 fov);
+    f32m4 getProjectionMatrix();
+    f32m4 getViewMatrix();
+    f32m4 getMVMatrix();
 
-    f32m4 m_mvp;
+    void updateView(double xOffset, double yOffset);
+  private:
+
+    f32v3 m_position = { 2.0f, 2.0f, 7.0f };
+
+    f32m4 m_proj;
+    f32m4 m_view;
     f32m4 m_mv;
-    f32m4 m_m;
   };
 }

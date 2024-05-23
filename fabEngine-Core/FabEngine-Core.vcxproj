@@ -527,6 +527,7 @@
     <ClInclude Include="external\glm\glm\vector_relational.hpp" />
     <ClInclude Include="inc\Core\Application.h" />
     <ClInclude Include="inc\Core\Camera.h" />
+    <ClInclude Include="inc\Core\CameraController.h" />
     <ClInclude Include="inc\Core\ImGuiLayer.h" />
     <ClInclude Include="inc\Core\Layer.h" />
     <ClInclude Include="inc\Core\LayerStack.h" />
@@ -544,6 +545,7 @@
     <ClCompile Include="external\imgui\examples\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Camera.cpp" />
+    <ClCompile Include="src\Core\CameraController.cpp" />
     <ClCompile Include="src\Core\ImGuiLayer.cpp" />
     <ClCompile Include="src\Core\Layer.cpp" />
     <ClCompile Include="src\Core\LayerStack.cpp" />

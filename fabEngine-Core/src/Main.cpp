@@ -26,19 +26,9 @@
 
 glm::mat4 MVPMatrix;
 glm::mat4 MVInvTrans;
-glm::vec3 LightPosition;
+f32v3 LightPosition;
 
 using namespace fabCoreGL;
-
-// make a struct of a light source containing vertex buffer, index buffer, position, and color
-struct Light
-{
-	std::vector<f32v3> vertexBuffer;
-	std::vector<f32v3> indexBuffer;
-	std::vector<f32v3> colorBuffer;
-	f32v3 position = f32v3(5.0f, 4.0f, 4.0f);
-	f32v3 color = f32v3(0.0f, 0.0f, 0.0f);
-};
 
 // make a struct of a light source containing vertex buffer, index buffer, position, and color
 struct Light
@@ -111,27 +101,27 @@ int main()
 
 	// initialize light object and set its position and vertexBuffer
 	Light light;
-	light.vertexBuffer = { glm::vec3(-0.5f, -0.5f, 0.5f),
-								 glm::vec3(0.5f, -0.5f, 0.5f),
-								 glm::vec3(0.5f, 0.5f, 0.5f),
-								 glm::vec3(-0.5f, 0.5f, 0.5f),
-								 glm::vec3(-0.5f, -0.5f, -0.5f),
-								 glm::vec3(0.5f, -0.5f, -0.5f),
-								 glm::vec3(0.5f, 0.5f, -0.5f),
-								 glm::vec3(-0.5f, 0.5f, -0.5f) };
+	light.vertexBuffer = { f32v3(-0.5f, -0.5f, 0.5f),
+								 f32v3(0.5f, -0.5f, 0.5f),
+								 f32v3(0.5f, 0.5f, 0.5f),
+								 f32v3(-0.5f, 0.5f, 0.5f),
+								 f32v3(-0.5f, -0.5f, -0.5f),
+								 f32v3(0.5f, -0.5f, -0.5f),
+								 f32v3(0.5f, 0.5f, -0.5f),
+								 f32v3(-0.5f, 0.5f, -0.5f) };
 	// Create the index buffer for the cube
-	light.indexBuffer = { glm::vec3(0, 1, 2),
-								 glm::vec3(0, 2, 3),
-								 glm::vec3(1, 5, 6),
-								 glm::vec3(1, 6, 2),
-								 glm::vec3(7, 6, 5),
-								 glm::vec3(7, 5, 4),
-								 glm::vec3(4, 0, 3),
-								 glm::vec3(4, 3, 7),
-								 glm::vec3(4, 5, 1),
-								 glm::vec3(4, 1, 0),
-								 glm::vec3(3, 2, 6),
-								 glm::vec3(3, 6, 7) };
+	light.indexBuffer = { f32v3(0, 1, 2),
+								 f32v3(0, 2, 3),
+								 f32v3(1, 5, 6),
+								 f32v3(1, 6, 2),
+								 f32v3(7, 6, 5),
+								 f32v3(7, 5, 4),
+								 f32v3(4, 0, 3),
+								 f32v3(4, 3, 7),
+								 f32v3(4, 5, 1),
+								 f32v3(4, 1, 0),
+								 f32v3(3, 2, 6),
+								 f32v3(3, 6, 7) };
 
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);
@@ -140,7 +130,7 @@ int main()
 	// Accept fragment if it closer to the camera than the former one (z-culling)
 	glDepthFunc(GL_LESS);
 
-	LightPosition = glm::vec3(-10.0f, 5.0f, 5.0f);
+	LightPosition = f32v3(-10.0f, 5.0f, 5.0f);
 
 	const char* filepath = "Assets/suzanne.obj";
 	const char* texturePath = "Assets/suzanneUV.DDS";
