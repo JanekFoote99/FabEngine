@@ -10,9 +10,13 @@ namespace fabCoreGL
     CameraController();
 
     void OnUpdate(float delta);
-    double GetXOffset();
-    double GetYOffset();
+    f32m4 CalculateView();
+
+    Camera GetCamera() { return m_camera; }
+    f32v3 GetCameraPosition() { return m_cameraPos; }
   private:
     Camera m_camera;
+    f32v3 m_cameraPos;
+    f32 m_cameraSpeed = 5.0f;
   };
 }

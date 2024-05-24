@@ -7,26 +7,31 @@ namespace fabCoreGL
     m_proj(glm::perspective(glm::radians(static_cast<float>(fov)), 4.0f / 3.0f, near, far)),
     m_view(f32m4(1.0f))
   {
-    m_mv = m_proj * m_view;
+    m_vp = m_proj * m_view;
   }
 
-  void Camera::updateView(double xOffset, double yOffset)
+  void Camera::SetPosition(f32v3 position)
   {
-    
+    m_position = position;
   }
 
-  f32m4 Camera::getProjectionMatrix()
+  void Camera::SetView(f32m4 viewMatrix)
+  {
+    m_view = viewMatrix;
+  }
+
+  f32m4 Camera::GetProjectionMatrix()
   {
     return m_proj;
   }
   
-  f32m4 Camera::getViewMatrix()
+  f32m4 Camera::GetViewMatrix()
   {
     return m_view;
   }
 
-  f32m4 Camera::getMVMatrix()
+  f32m4 Camera::GetVPMatrix()
   {
-    return m_mv;
+    return m_vp;
   }
 }

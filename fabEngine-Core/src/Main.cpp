@@ -26,7 +26,6 @@
 
 glm::mat4 MVPMatrix;
 glm::mat4 MVInvTrans;
-f32v3 LightPosition;
 
 using namespace fabCoreGL;
 
@@ -40,7 +39,7 @@ struct Light
 	f32v3 color = f32v3(0.0f, 0.0f, 0.0f);
 };
 
-struct ImGuiAttributes
+struct GuiAttributes
 {
 	glm::f32 nearPlane = 0.1f;
 	glm::f32 farPlane = 100.0f;
@@ -75,7 +74,7 @@ int main()
 {
 	fabCoreGL::Application app("fabCore", 1920, 1080);
 
-	ImGuiAttributes imGuiAttributes;
+	GuiAttributes imGuiAttributes;
 
 	glClearColor(0.3f, 0.3f, 0.3f, 0.0f);
 
@@ -129,8 +128,6 @@ int main()
 	glEnable(GL_CULL_FACE);
 	// Accept fragment if it closer to the camera than the former one (z-culling)
 	glDepthFunc(GL_LESS);
-
-	LightPosition = f32v3(-10.0f, 5.0f, 5.0f);
 
 	const char* filepath = "Assets/suzanne.obj";
 	const char* texturePath = "Assets/suzanneUV.DDS";
